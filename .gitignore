@@ -1,0 +1,40 @@
+# Build artifacts
+MazeRunner
+MazeRunner.exe
+*.o
+*.obj
+*.exe
+*.out
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# CMake (if used in future)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
