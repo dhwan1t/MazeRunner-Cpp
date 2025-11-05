@@ -11,7 +11,7 @@
  * AIPathfinder class
  * Implements BFS and Dijkstra's algorithm for finding shortest path
  * Uses Queue for BFS and Priority Queue (Min Heap) for Dijkstra
- * Member: 3 - AI bot pathfinding
+ * Member: 3 - Pathfinding algorithms
  */
 class AIPathfinder {
 private:

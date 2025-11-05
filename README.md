@@ -7,7 +7,7 @@ A console-based maze game built with C++ for Advanced Data Structures and Algori
 This project simulates a maze-based game where:
 - The maze is generated algorithmically using **DFS (Depth First Search)**
 - The player navigates from start to exit point
-- An AI bot finds the shortest path using **BFS** or **Dijkstra's algorithm**
+- Pathfinding algorithms (BFS/Dijkstra) demonstrate optimal paths
 - Everything is displayed in ASCII format in the console
 
 ## 🧩 Technical Specifications
@@ -72,7 +72,7 @@ MazeRunner.exe
 
 1. **Main Menu Options:**
    - Play Game - Navigate the maze yourself
-   - Watch AI Solve - Watch AI solve the maze automatically
+   - Example Run - Watch an example pathfinding demonstration
    - View High Scores - See top scores
    - Instructions - View game controls
    - Exit - Quit the game
@@ -90,7 +90,7 @@ MazeRunner.exe
    - `P` - Player
    - `S` - Start position
    - `E` - Exit position
-   - `*` - AI Bot (when watching AI solve)
+   - `*` - Example path (when watching example run)
 
 4. **Objective:**
    - Navigate from `S` (Start) to `E` (Exit)
@@ -103,7 +103,7 @@ MazeRunner.exe
 |--------|----------------|----------------|-----------|
 | 1 | Maze generation | Graph + Stack | DFS |
 | 2 | Player control | Linked List | Movement logic |
-| 3 | AI bot pathfinding | Queue / Min Heap | BFS / Dijkstra |
+| 3 | Pathfinding algorithms | Queue / Min Heap | BFS / Dijkstra |
 | 4 | Scoring system | HashMap | Sorting leaderboard |
 | 5 | Game management | Queue | Event handling |
 | 6 | Utility + Display | None | Rendering + I/O |
@@ -121,12 +121,12 @@ Final Score = (Efficiency × 10) + Time Bonus + Move Bonus
 
 - ✅ Procedural maze generation using DFS
 - ✅ Player movement with collision detection
-- ✅ AI pathfinding with BFS and Dijkstra algorithms
+- ✅ Pathfinding algorithms (BFS and Dijkstra) for optimal paths
 - ✅ Real-time score tracking
 - ✅ High score leaderboard with file persistence
 - ✅ Color-coded ASCII display
 - ✅ Cross-platform compatibility
-- ✅ Animated AI solving mode
+- ✅ Animated example path demonstration
 
 ## 🔧 Code Organization
 
@@ -140,7 +140,7 @@ Final Score = (Efficiency × 10) + Time Bonus + Move Bonus
 - Maze dimensions must be odd numbers for proper structure
 - High scores are saved to `highscores.txt` file
 - The game supports different maze sizes (15x15, 21x21, 25x25)
-- AI can use either BFS or Dijkstra algorithm for pathfinding
+- Example run can use either BFS or Dijkstra algorithm for pathfinding
 
 ## 🐛 Troubleshooting
 

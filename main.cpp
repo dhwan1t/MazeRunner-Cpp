@@ -75,7 +75,7 @@ void displayMenu() {
     
     Utilities::setColor("cyan");
     std::cout << "  1. Play Game" << std::endl;
-    std::cout << "  2. Watch AI Solve" << std::endl;
+    std::cout << "  2. Example Run" << std::endl;
     std::cout << "  3. View High Scores" << std::endl;
     std::cout << "  4. Instructions" << std::endl;
     std::cout << "  5. Exit" << std::endl;
@@ -110,7 +110,7 @@ void displayInstructions() {
     std::cout << "    P - Player" << std::endl;
     std::cout << "    S - Start" << std::endl;
     std::cout << "    E - Exit" << std::endl;
-    std::cout << "    * - AI Bot (when watching AI solve)" << std::endl;
+    std::cout << "    * - Example path (when watching example run)" << std::endl;
     std::cout << std::endl;
     
     std::cout << "  Objective:" << std::endl;
@@ -125,7 +125,7 @@ void displayInstructions() {
 }
 
 /**
- * Display maze with player and optional AI path
+ * Display maze with player and optional example path
  */
 void displayMaze(const MazeGenerator& maze, const Player& player, 
                  const std::vector<std::pair<int, int>>& aiPath, 
@@ -137,7 +137,7 @@ void displayMaze(const MazeGenerator& maze, const Player& player,
     // Create a copy for display
     std::vector<std::vector<char>> display = mazeGrid;
     
-    // Draw AI path if provided
+    // Draw example path if provided
     if (!aiPath.empty() && currentAIStep >= 0) {
         for (int i = 0; i <= currentAIStep && i < (int)aiPath.size(); i++) {
             int x = aiPath[i].first;
@@ -306,7 +306,7 @@ void playGame() {
 }
 
 /**
- * Watch AI solve the maze
+ * Watch example run - demonstrates pathfinding algorithms
  */
 void watchAISolve() {
     Utilities::clearScreen();
@@ -350,8 +350,8 @@ void watchAISolve() {
         return;
     }
     
-    // Animate AI solving
-    std::cout << "AI Solving Maze..." << std::endl;
+    // Animate example run
+    std::cout << "Running Example Path..." << std::endl;
     std::cout << "Path length: " << pathfinder.getPathLength(path) << " moves" << std::endl;
     std::cout << "Press Enter to start animation...";
     std::cin.ignore();
@@ -368,12 +368,12 @@ void watchAISolve() {
         // Update dummy player position
         dummyPlayer.initialize(path[i].first, path[i].second);
         
-        // Display maze with AI path
+        // Display maze with example path
         displayMaze(maze, dummyPlayer, path, i);
         
         std::cout << std::endl;
         Utilities::setColor("yellow");
-        std::cout << "AI Step: " << (i + 1) << " / " << path.size() << std::endl;
+        std::cout << "Step: " << (i + 1) << " / " << path.size() << std::endl;
         Utilities::resetColor();
         
         Utilities::sleep(200);  // Animation speed
@@ -383,7 +383,7 @@ void watchAISolve() {
     displayMaze(maze, dummyPlayer, path, path.size() - 1);
     std::cout << std::endl;
     Utilities::setColor("green");
-    std::cout << "AI solved the maze in " << path.size() << " moves!" << std::endl;
+    std::cout << "Example path completed in " << path.size() << " moves!" << std::endl;
     Utilities::resetColor();
     
     std::cout << "Press Enter to continue...";
